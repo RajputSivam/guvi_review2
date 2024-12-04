@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fraud Detection System - User Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS link -->
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            <h3>AI Fraud Detection System - User Management</h3>
+        </div>
+        <div class="card-body">
+            <!-- Registration Form -->
+            <form id="registrationForm">
+                <h4>Register</h4>
+                <div class="form-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" class="form-control" id="regUsername" required>
+                    <div id="regUsernameError" class="alert alert-custom mt-2 d-none">Username is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" class="form-control" id="regEmail" required>
+                    <div id="regEmailError" class="alert alert-custom mt-2 d-none">Please enter a valid email.</div>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" class="form-control" id="regPassword" required>
+                    <div id="regPasswordError" class="alert alert-custom mt-2 d-none">Password is required (min 8 characters).</div>
+                </div>
+                <button type="submit" class="btn btn-custom btn-block">Register</button>
+            </form>
+
+            <hr>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="mt-4">
+                <h4>Login</h4>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" class="form-control" id="loginEmail" required>
+                    <div id="loginEmailError" class="alert alert-custom mt-2 d-none">Please enter a valid email.</div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" required>
+                    <div id="loginPasswordError" class="alert alert-custom mt-2 d-none">Password is required.</div>
+                </div>
+                <button type="submit" class="btn btn-custom btn-block">Login</button>
+            </form>
+
+            <hr>
+
+            <!-- User Profile -->
+            <div id="userProfile" class="d-none">
+                <h4>User Profile</h4>
+                <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+                <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                <button class="btn btn-danger btn-block" id="logoutBtn">Logout</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="scripts.js"></script> <!-- External JavaScript link -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
